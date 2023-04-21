@@ -12,22 +12,25 @@
 
 print('Введите желаемую длину списка')
 number = int(input())
-list = []
-for i in range(number):
-    list.append(i + 1)
-print(list)
+if number < 0:
+    print('Нужно число больше ноля, дерзай')
+else:
+    list = []
+    for i in range(number):
+        list.append(i + 1)
+    print(list)
 
-print('Введите интересное число')
-number_x = int(input())
-   
-array = [number]
+    print('Введите интересное число')
+    number_x = int(input())
+    
+    array = [number]
 
-for i in range(len(list)):
-    if list[i] == number_x:
-        print(f'Число есть в списке {list[i]}')
-if number_x < 0:
-    print(f'Ближайшее число в списке {list[0]}')    
-elif number_x > list[number - 1]:
-    print(f'Ближайшее число в списке {list[number - 1]}')        
+    for i in range(len(list)):
+        if list[i] == number_x:
+            print(f'Число есть в списке- {list[i]}')
+    if number_x < 0:
+        print(f'Ближайшее число в списке- {list[0]}')    
+    elif number_x > list[number - 1]:
+        print(f'Ближайшее число в списке- {list[number - 1]}')        
 
 
